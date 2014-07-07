@@ -59,10 +59,10 @@ class Bing
 
   end
 
-  def spelling(search_term, offset = 0)
+  def web_search(search_term, offset = 0)
 
     user = ''
-    web_search_url = "https://api.datamarket.azure.com/Bing/Search/v1/SpellingSuggestions?"
+    web_search_url = "https://api.datamarket.azure.com/Bing/Search/v1/Web?"
     query_string = 'Query='
     query_portion = URI.encode_www_form_component('\'' + search_term + '\'')
     @params.each do |k,v|
