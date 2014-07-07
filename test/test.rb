@@ -4,7 +4,7 @@ require_relative '../lib/searchbing.rb'
 require 'test/unit'
 
 class TestSearchBing < Test::Unit::TestCase
-  
+
   def test_constructor
     bing_image = Bing.new('testkey', 10, 'Image', {:SomeParam => 'test'})
     assert_equal(true, bing_image.respond_to?(:num_results))
