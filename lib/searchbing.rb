@@ -63,7 +63,7 @@ class Bing
 
     user = ''
     web_search_url = "https://api.datamarket.azure.com/Bing/Search/v1/Web?"
-    query_string = 'Query='
+    query_string = '$format=json&Query='
     query_portion = URI.encode_www_form_component('\'' + search_term + '\'')
     @params.each do |k,v|
       params << "&#{k.to_s}=\'#{v.to_s}\'"
